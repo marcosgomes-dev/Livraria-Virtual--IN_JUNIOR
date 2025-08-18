@@ -1,0 +1,120 @@
+.container {
+    width: 95%;
+    max-width: 1250px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+/* Botão de voltar */
+.voltar {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(82, 69, 182);
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.voltar:hover{
+    border-radius: 3px;
+    background-color:rgb(82, 69, 182);
+    color: white;
+}
+
+/* Layout principal para alinhar lado a lado */
+.bookDetails {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Alinha no topo */
+}
+
+/* Card apenas para a imagem */
+.bookCard {
+    background-color: #f4f4ff;
+    padding: 3rem 0.5rem;
+    width: 24rem;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid rgba(98, 96, 96, 0.32);
+}
+
+/* Imagem do livro */
+.livroCapa {
+    width: 100%;
+    width: 18rem;
+    height: 28rem;
+    border-radius: 8px;
+}
+
+/* Informações do livro */
+.bookInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 546px;
+    gap: 60px;
+}
+.containerDescription{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    
+}
+
+/* Ajuste dos textos */
+.titulo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.autor {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.sinopseTitulo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.sinopse {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Botão do carrinho */
+.botaoCarrinho {
+    background-color: #EF6B4A;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    transition: 0.3s;
+    align-self: flex-end;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16.5px 20px;
+}
+
+.botaoCarrinho:hover {
+    background-color: #E4572E;
+    transform: scale(1.05);
+}

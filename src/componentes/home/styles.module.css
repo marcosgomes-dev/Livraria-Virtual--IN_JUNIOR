@@ -1,0 +1,7 @@
+.areaBanner {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 400px;
+}

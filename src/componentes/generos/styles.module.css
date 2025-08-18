@@ -1,0 +1,134 @@
+.paginaGenero {
+    width: 95%;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.botaoVoltar {
+    background: none;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(82, 69, 182);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.campoPesquisa {
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 1.5rem;
+    margin-bottom: 6rem;
+    margin-left: 205px;
+    align-items: center;
+}
+
+.botaoVoltar {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.gridLivros {
+  display: grid;
+  grid-template-columns: repeat(5, 270px);
+  column-gap: 100px;
+  row-gap: 50px;
+}
+
+.cardLivro {
+    background-color: #f4f4ff; 
+    padding: 12px 15px 18px 15px;
+    border-radius: 0.25rem;
+    height: 433px;
+    width: 300px;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardLivro:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imagemLivro {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.conteudoCard {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tituloLivro {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.autorLivro {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.precoLivro {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(82, 69, 182);
+}
+
+.mensagemNenhumLivro {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    width: 100%;
+}
+
+.botaoVoltar:hover {
+    border-radius: 3px;
+    background-color: rgb(82, 69, 182);
+    color: white;
+}
+
+.cabecalhoGenero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.botaoVoltar {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0;
+}
+
+.campoPesquisa {
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+}
