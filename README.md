@@ -1,69 +1,55 @@
-# React + TypeScript + Vite
+# Livraria Virtual
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido como tarefa na IN Junior. É uma aplicação de livraria virtual com autenticação, navegação por gêneros e página de detalhes de cada livro.
 
-Currently, two official plugins are available:
+## Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O usuário acessa a plataforma por uma página de login com validação de e-mail e senha. Após autenticar, é redirecionado para a Home, onde vê um banner e a listagem de livros disponíveis. É possível navegar por gênero e acessar a página de detalhes de cada título.
 
-## Expanding the ESLint configuration
+O foco do projeto foi praticar roteamento com React Router, validação de formulários com Zod e React Hook Form, e organização de componentes com CSS Modules.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Páginas
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Login** — formulário de entrada com validação de e-mail e senha (mínimo 6 caracteres). Usa `react-hook-form` + `zod` para as regras de validação e exibe estado de carregamento durante o envio.
+- **Home** — banner de destaque + listagem geral dos livros
+- **Gêneros** (`/genre/:genero`) — filtra e exibe os livros pelo gênero selecionado
+- **Detalhes** (`/details/:id`) — página individual de cada livro com suas informações completas
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Estrutura
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+├── paginas/
+│   ├── login/
+│   ├── home/
+│   ├── generos/
+│   └── sobre/
+├── componentes/
+│   ├── header/
+│   ├── home/
+│   ├── livros/
+│   └── sobre/
+├── router.tsx
+└── App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Como rodar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/marcosgomes-dev/Livraria-Virtual-_IN.git
+cd Livraria-Virtual-_IN
+npm install
+npm run dev
 ```
+
+Acesse em `http://localhost:5173`. Para fazer login, qualquer e-mail válido e senha com 6+ caracteres funcionam.
+
+## Tecnologias
+
+- React 19
+- TypeScript
+- Vite
+- React Router DOM v7
+- React Hook Form + Zod
+- Axios
+- CSS Modules
